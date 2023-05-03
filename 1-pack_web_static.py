@@ -5,7 +5,7 @@ from datetime import date
 
 
 def do_pack():
-    """ A script that generates archive the contents of web_static folder"""
+    """ Fabric script generating archive for contents of web_static folder"""
 
     filename = strftime("%Y%m%d%H%M%S")
     try:
@@ -15,5 +15,5 @@ def do_pack():
 
         return "versions/web_static_{}.tgz".format(filename)
 
-    except Exception as e:
+    except Exception:
         return None
